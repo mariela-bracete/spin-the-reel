@@ -25,7 +25,7 @@ Spin The Reel is a hybrid movie recommendation system using ALS for collaborativ
 - Train collaborative filtering model using PySpark ALS, consuming ratings data from PostgreSQL via JDBC  
 - Build content-based similarity representations from TMDB metadata using TF-IDF and FAISS  
 - Combine collaborative and content-based signals to generate hybrid Top-N recommendations  
-- Precompute recommendation outputs and store as parquet artifacts  
+- Precompute recommendation outputs and store as a parquet artifact  
 - Serve recommendations via Flask using precomputed results  
 
 ## Project Structure
