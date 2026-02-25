@@ -1,23 +1,23 @@
 Spin The Reel is a hybrid movie recommendation system using ALS for collaborative signals and TF-IDF/FAISS for content-based similarity. It  consists of an ETL pipeline, model training and output generation using PySpark for implementation at scale, and a Flask demo app.
 
 ## What does it do?
-⁃ Ingests MovieLens ratings and TMDB metadata from CSV files  
-⁃ Performs data cleaning and transformation, including handling missing values, dropping unused columns, and preparing modeling-ready datasets  
-⁃ Persists cleaned ratings data to PostgreSQL and movie metadata to MongoDB (dual persistence)  
-⁃ Trains a hybrid recommendation system that combines:
-⁃ Collaborative filtering using PySpark ALS, trained on user–movie ratings sourced from PostgreSQL via JDBC  
-⁃ Content-based similarity derived from TMDB metadata using TF-IDF, dimensionality reduction, and FAISS for efficient similarity search  
-⁃ Generates Top-N movie recommendations and saves results as Parquet artifacts 
-⁃ Serves recommendations through a Flask web application, enriching outputs with TMDB metadata for human-readable results  
+- Ingests MovieLens ratings and TMDB metadata from CSV files
+- Performs data cleaning and transformation, including handling missing values, dropping unused columns, and preparing modeling-ready datasets  
+- Persists cleaned ratings data to PostgreSQL and movie metadata to MongoDB (dual persistence)  
+- Trains a hybrid recommendation system that combines:
+  	- Collaborative filtering using PySpark ALS, trained on user–movie ratings sourced from PostgreSQL via JDBC  
+	- Content-based similarity derived from TMDB metadata using TF-IDF, dimensionality reduction, and FAISS for efficient similarity search  
+- Generates Top-N movie recommendations and saves results as Parquet artifacts 
+- Serves recommendations through a Flask web application, enriching outputs with TMDB metadata for human-readable results  
 
 ## Tech Stack
 - Python (see requirements.txt for full list of packages)  
-⁃ PostgreSQL: storage of preprocessed ratings data and source for Spark-based ALS training  
-⁃ MongoDB: storage of movie metadata and content features for flexible document-based access  
-⁃ Apache Spark (PySpark): scalable training of the collaborative filtering component (ALS) via JDBC  
-⁃ FAISS: efficient similarity search over content-based movie representations  
-⁃ scikit-learn: TF-IDF vectorization and dimensionality reduction for metadata-based similarity  
-⁃ Flask: lightweight web application for serving recommendations  
+- PostgreSQL: storage of preprocessed ratings data and source for Spark-based ALS training  
+- MongoDB: storage of movie metadata and content features for flexible document-based access  
+- Apache Spark (PySpark): scalable training of the collaborative filtering component (ALS) via JDBC  
+- FAISS: efficient similarity search over content-based movie representations  
+- scikit-learn: TF-IDF vectorization and dimensionality reduction for metadata-based similarity  
+- Flask: lightweight web application for serving recommendations  
 
 ## Pipeline Overview
 - Extract and clean MovieLens ratings and TMDB metadata  
