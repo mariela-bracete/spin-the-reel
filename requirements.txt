@@ -1,0 +1,9 @@
+pandas
+numpy
+psycopg2-binary
+pymongo
+sqlalchemy
+scikit-learn
+pyspark
+tqdm
+faiss-cpu

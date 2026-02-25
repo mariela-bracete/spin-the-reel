@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Recommender</title>
+</head>
+<body>
+  <h1>Spin the Reel 🎬</h1>
+
+  <form method="POST">
+    <label for="title">Enter a movie title:</label>
+    <input type="text" id="title" name="title" required>
+    <button type="submit">Recommend</button>
+  </form>
+
+  {% if movie_title %}
+    <h2>Movies similar to: <em>{{ movie_title }}</em></h2>
+  {% endif %}
+
+  {% if recommendations is not none %}
+    <ul>
+      {% for title in recommendations %}
+        <li>{{ title.title }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</body>
+</html>

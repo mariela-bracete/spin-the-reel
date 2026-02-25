@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Recommender (MongoDB Query)</title>
+</head>
+<body>
+  <h1>Spin the Reel 🎬 (MongoDB Query)</h1>
+
+  <form method="POST">
+    <label for="title">Enter a movie title:</label>
+    <input type="text" id="title" name="title" required>
+    <button type="submit">Recommend</button>
+  </form>
+
+  {% if movie_title %}
+    <h2>Movies similar to: <em>{{ movie_title }}</em></h2>
+  {% endif %}
+
+  {% if df_table is not none %}
+    {{ df_table | safe }}
+  {% endif %}
+</body>
+</html>
