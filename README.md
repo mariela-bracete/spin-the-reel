@@ -30,6 +30,7 @@ Spin The Reel is a hybrid movie recommendation system using ALS for collaborativ
 
 ## Project Structure
 **Note on directory structure:** The project structure shown below reflects the intended repository organization. If you wish to run `SpinTheReel_vF_Final.ipynb` as is, ensure that required input files (e.g., `ratings.csv`, `TMDB_movie_dataset_v11.csv`) are located in the same directory as the notebook *or*, if you prefer the optimized folder structure below, you must update file paths in the notebook accordingly.
+
 	```text	
 	spin-the-reel/
 	├── app/
